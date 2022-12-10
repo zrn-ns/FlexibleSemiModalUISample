@@ -13,6 +13,8 @@
 		74FC7E952944476F0038C9EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74FC7E932944476F0038C9EF /* Main.storyboard */; };
 		74FC7E97294447720038C9EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74FC7E96294447720038C9EF /* Assets.xcassets */; };
 		74FC7E9A294447720038C9EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74FC7E98294447720038C9EF /* LaunchScreen.storyboard */; };
+		74FC7EA5294448470038C9EF /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74FC7EA4294448470038C9EF /* PaymentView.swift */; };
+		74FC7EA7294448AC0038C9EF /* PaymentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74FC7EA6294448AC0038C9EF /* PaymentView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		74FC7E96294447720038C9EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74FC7E99294447720038C9EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74FC7E9B294447720038C9EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74FC7EA4294448470038C9EF /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		74FC7EA6294448AC0038C9EF /* PaymentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		74FC7E8C2944476F0038C9EF /* FlexibleSemiModalUISample */ = {
 			isa = PBXGroup;
 			children = (
+				74FC7EA32944483B0038C9EF /* Views */,
 				74FC7E8D2944476F0038C9EF /* AppDelegate.swift */,
 				74FC7E8F2944476F0038C9EF /* SceneDelegate.swift */,
 				74FC7E912944476F0038C9EF /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				74FC7E9B294447720038C9EF /* Info.plist */,
 			);
 			path = FlexibleSemiModalUISample;
+			sourceTree = "<group>";
+		};
+		74FC7EA32944483B0038C9EF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74FC7EA4294448470038C9EF /* PaymentView.swift */,
+				74FC7EA6294448AC0038C9EF /* PaymentView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74FC7E9A294447720038C9EF /* LaunchScreen.storyboard in Resources */,
+				74FC7EA7294448AC0038C9EF /* PaymentView.xib in Resources */,
 				74FC7E97294447720038C9EF /* Assets.xcassets in Resources */,
 				74FC7E952944476F0038C9EF /* Main.storyboard in Resources */,
 			);
@@ -139,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74FC7E922944476F0038C9EF /* ViewController.swift in Sources */,
+				74FC7EA5294448470038C9EF /* PaymentView.swift in Sources */,
 				74FC7E8E2944476F0038C9EF /* AppDelegate.swift in Sources */,
 				74FC7E902944476F0038C9EF /* SceneDelegate.swift in Sources */,
 			);
