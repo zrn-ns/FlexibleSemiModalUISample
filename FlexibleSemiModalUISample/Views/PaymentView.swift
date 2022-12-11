@@ -8,6 +8,31 @@
 import Foundation
 import UIKit
 
+final class PaymentViewController: UIViewController {
+
+    var tappedCancelHandler: (() -> Void)?
+
+    override func loadView() {
+        self.view = UIView()
+
+        // 背景は透過する
+        view.backgroundColor = .clear
+
+        // セミモーダル表示するビューを生成して、addSubviewする
+        let paymentView = PaymentView()
+        paymentView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(paymentView)
+        view.addConstraints([
+            paymentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            paymentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            paymentView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+        paymentView.tappedCancelHandler = { [weak self] in
+            self?.tappedCancelHandler?()
+        }
+    }
+}
+
 final class PaymentView: UIView {
 
     var tappedCancelHandler: (() -> Void)?
