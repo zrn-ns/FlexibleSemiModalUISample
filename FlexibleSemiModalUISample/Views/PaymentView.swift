@@ -27,6 +27,11 @@ final class PaymentViewController: UIViewController {
             paymentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             paymentView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+
+        // 角丸設定
+        paymentView.layer.cornerRadius = 10
+        paymentView.layer.masksToBounds = true
+        paymentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         paymentView.tappedCancelHandler = { [weak self] in
             self?.tappedCancelHandler?()
         }
