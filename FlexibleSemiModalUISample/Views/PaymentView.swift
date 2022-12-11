@@ -18,6 +18,9 @@ final class PaymentViewController: UIViewController {
         // 背景は透過する
         view.backgroundColor = .clear
 
+        // 背景タップ時、キャンセル扱いにする
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tappedBackground)))
+
         // セミモーダル表示するビューを生成して、addSubviewする
         let paymentView = PaymentView()
         paymentView.translatesAutoresizingMaskIntoConstraints = false
@@ -27,14 +30,21 @@ final class PaymentViewController: UIViewController {
             paymentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             paymentView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+        // PaymentView自体のタップは処理しない
+        paymentView.addGestureRecognizer(UITapGestureRecognizer())
 
         // 角丸設定
         paymentView.layer.cornerRadius = 10
         paymentView.layer.masksToBounds = true
         paymentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+
         paymentView.tappedCancelHandler = { [weak self] in
             self?.tappedCancelHandler?()
         }
+    }
+
+    @objc private func tappedBackground() {
+        tappedCancelHandler?()
     }
 }
 
