@@ -14,6 +14,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction private func tappedCheckoutButton(_ sender: Any) {
+        let paymentVC = PaymentViewController()
+        paymentVC.modalPresentationStyle = .pageSheet
+        paymentVC.tappedCancelHandler = {
+            paymentVC.dismiss(animated: true)
+        }
+        present(paymentVC, animated: true)
+    }
 }
 
